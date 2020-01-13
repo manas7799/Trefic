@@ -1,0 +1,3 @@
+x = input("Enter the word: ")
+y = input("Enter the alphabet to find: ")
+print(x.count(y))
