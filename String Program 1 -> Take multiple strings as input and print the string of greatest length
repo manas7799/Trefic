@@ -9,8 +9,9 @@ print(length)  # Prints a list of length of all the words
 print(word)    # Prints a list of all the words
 for x in range(0,len(length)):
     for x in range(0,len(word)):
-        D = {length[x]:word[x]}
+        D = {word[x]:length[x]}
         Dict.update(D)
-print(Dict)    # Prints dictionary keys as length of words and values as actual words
+print(Dict)    # Prints dictionary keys as words and values as length of words
 Max = max(length)
-print(Dict[Max])   # Prints word of maximum length from the dictionary
+lst = [key  for (key, value) in Dict.items() if value == Max]
+print(lst)     # Prints a lsit of string with greatest length
