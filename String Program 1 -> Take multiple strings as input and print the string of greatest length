@@ -1,0 +1,16 @@
+word = input("Enter any word: ")
+word = word.split(" ")
+length = []
+Dict = {}
+for i in range(0,len(word)):
+    l = len(word[i])
+    length.append(l)
+print(length)  # Prints a list of length of all the words
+print(word)    # Prints a list of all the words
+for x in range(0,len(length)):
+    for x in range(0,len(word)):
+        D = {length[x]:word[x]}
+        Dict.update(D)
+print(Dict)    # Prints dictionary keys as length of words and values as actual words
+Max = max(length)
+print(Dict[Max])   # Prints word of maximum length from the dictionary
