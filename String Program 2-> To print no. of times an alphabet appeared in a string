@@ -1,0 +1,10 @@
+lst = input("Enter any word: ")
+print(lst)
+final_list = [] 
+for n in lst: 
+    if n not in final_list:
+        final_list.append(n) 
+print(final_list)
+length = len(final_list)
+for i in range(0,length):
+    print(final_list[i]," => ",lst.count(final_list[i]))
